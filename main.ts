@@ -1,7 +1,12 @@
 input.onButtonPressed(Button.B, function () {
-	
+    if (_symbol < 2) {
+        _symbol = _symbol + 1
+    } else {
+        _symbol = 0
+    }
 })
 let _symbol = 0
+_symbol = 0
 basic.forever(function () {
     if (_symbol == 0) {
         basic.showIcon(IconNames.Sword)
@@ -15,5 +20,7 @@ basic.forever(function () {
             `)
     } else if (_symbol == 2) {
         basic.showIcon(IconNames.Heart)
+    } else {
+        basic.showIcon(IconNames.No)
     }
 })
