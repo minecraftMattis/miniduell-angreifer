@@ -1,3 +1,10 @@
+input.onButtonPressed(Button.A, function () {
+    if (_symbol > 0) {
+        _symbol = _symbol - 1
+    } else {
+        _symbol = 2
+    }
+})
 input.onButtonPressed(Button.B, function () {
     if (_symbol < 2) {
         _symbol = _symbol + 1
